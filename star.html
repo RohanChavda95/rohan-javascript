@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const rows = 5;
+      for (let i = rows; i >= 1; i--) {
+        let row = "";
+        for (let j = 1; j <= rows; j++) {
+          for (let k = 0; k < rows - i; k++) {
+            row += "  ";
+          }
+          for (let l = 0; l < i; l++) {
+            if (i < 2) {
+              row += ` 5  `;
+            } else {
+              if (j % 2 == 0) {
+                row += ` -  `;
+              } else {
+                row += ` *  `;
+              }
+            }
+          }
+          for (let m = 0; m < rows - i; m++) {
+            row += "  ";
+          }
+
+          row += "  ";
+        }
+        console.log(row);
+      }
+    </script>
+    <script>
+      let n = 5;
+      for (let i = 1; i <= n; i++) {
+        let str = "";
+        let newone = "";
+        for (let j = 1; j <= 2 * n; ++j) {
+          if (i + j >= n + 1 && i >= j - n + 1) {
+            str += i - 1;
+          } else {
+            str += " ";
+          }
+        }
+        console.log(str);
+      }
+      for (let x = 1; x <= n; x++) {
+        let newone = " ";
+        for (let k = 1; k < x; k++) {
+          newone += " ";
+        }
+        for (let d = 3; d <= 2 * (n - x) + 1; d++) {
+          newone += 4 - x;
+        }
+        console.log(newone);
+      }
+    </script>
+  </body>
+</html>
